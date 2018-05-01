@@ -56,6 +56,7 @@ export class DataTable implements DataTableParams, OnInit {
     @Input() selectOnRowClick = false;
     @Input() autoReload = true;
     @Input() showReloading = false;
+    @Input() rowClickable: (item: any) => boolean;
 
     // UI state without input:
 

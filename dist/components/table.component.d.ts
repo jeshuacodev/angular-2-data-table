@@ -26,6 +26,7 @@ export declare class DataTable implements DataTableParams, OnInit {
     selectOnRowClick: boolean;
     autoReload: boolean;
     showReloading: boolean;
+    rowClickable: (item: any) => boolean;
     indexColumnVisible: boolean;
     selectColumnVisible: boolean;
     expandColumnVisible: boolean;

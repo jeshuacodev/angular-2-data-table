@@ -8,8 +8,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var DataTableColumn = (function () {
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var DataTableColumn = /** @class */ (function () {
     function DataTableColumn() {
         this.sortable = false;
         this.resizable = false;
@@ -36,56 +37,54 @@ var DataTableColumn = (function () {
         if (this.styleClass != null) {
             this.styleClassObject = (_a = {},
                 _a[this.styleClass] = true,
-                _a
-            );
+                _a);
         }
         var _a;
     };
     __decorate([
-        core_1.Input(), 
-        __metadata('design:type', String)
+        core_1.Input(),
+        __metadata("design:type", String)
     ], DataTableColumn.prototype, "header", void 0);
     __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
+        core_1.Input(),
+        __metadata("design:type", Object)
     ], DataTableColumn.prototype, "sortable", void 0);
     __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
+        core_1.Input(),
+        __metadata("design:type", Object)
     ], DataTableColumn.prototype, "resizable", void 0);
     __decorate([
-        core_1.Input(), 
-        __metadata('design:type', String)
+        core_1.Input(),
+        __metadata("design:type", String)
     ], DataTableColumn.prototype, "property", void 0);
     __decorate([
-        core_1.Input(), 
-        __metadata('design:type', String)
+        core_1.Input(),
+        __metadata("design:type", String)
     ], DataTableColumn.prototype, "styleClass", void 0);
     __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Function)
+        core_1.Input(),
+        __metadata("design:type", Function)
     ], DataTableColumn.prototype, "cellColors", void 0);
     __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
+        core_1.Input(),
+        __metadata("design:type", Object)
     ], DataTableColumn.prototype, "width", void 0);
     __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
+        core_1.Input(),
+        __metadata("design:type", Object)
     ], DataTableColumn.prototype, "visible", void 0);
     __decorate([
-        core_1.ContentChild('dataTableCell'), 
-        __metadata('design:type', Object)
+        core_1.ContentChild('dataTableCell'),
+        __metadata("design:type", Object)
     ], DataTableColumn.prototype, "cellTemplate", void 0);
     __decorate([
-        core_1.ContentChild('dataTableHeader'), 
-        __metadata('design:type', Object)
+        core_1.ContentChild('dataTableHeader'),
+        __metadata("design:type", Object)
     ], DataTableColumn.prototype, "headerTemplate", void 0);
     DataTableColumn = __decorate([
         core_1.Directive({
             selector: 'data-table-column'
-        }), 
-        __metadata('design:paramtypes', [])
+        })
     ], DataTableColumn);
     return DataTableColumn;
 }());

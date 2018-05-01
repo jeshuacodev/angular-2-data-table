@@ -6,6 +6,7 @@ export const ROW_TEMPLATE = `
     [class.row-even]="index % 2 === 1"
     [class.selected]="selected"
     [class.clickable]="dataTable.selectOnRowClick"
+    [class.clickable2]="dataTable.rowClickable(item)"
     (dblclick)="dataTable.rowDoubleClicked(_this, $event)"
     (click)="dataTable.rowClicked(_this, $event)"
     >

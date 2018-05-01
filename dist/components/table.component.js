@@ -8,14 +8,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var column_component_1 = require('./column.component');
-var row_component_1 = require('./row.component');
-var types_1 = require('./types');
-var drag_1 = require('../utils/drag');
-var table_template_1 = require('./table.template');
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var column_component_1 = require("./column.component");
+var row_component_1 = require("./row.component");
+var types_1 = require("./types");
+var drag_1 = require("../utils/drag");
+var table_template_1 = require("./table.template");
 var table_style_1 = require("./table.style");
-var DataTable = (function () {
+var DataTable = /** @class */ (function () {
     function DataTable() {
         this._items = [];
         this.header = true;
@@ -280,7 +281,7 @@ var DataTable = (function () {
         // unselect all other rows:
         if (row.selected && !this.multiSelect) {
             this.rows.toArray().filter(function (row_) { return row_.selected; }).forEach(function (row_) {
-                if (row_ !== row) {
+                if (row_ !== row) { // avoid endless loop
                     row_.selected = false;
                 }
             });
@@ -311,139 +312,148 @@ var DataTable = (function () {
          and even increase the table width. The current implementation suffers from the fact,
          that offsetWidth sometimes contains out-of-date values. */
         if ((dx < 0 && (columnElement.offsetWidth + dx) <= this.resizeLimit) ||
-            !columnElement.nextElementSibling ||
+            !columnElement.nextElementSibling || // resizing doesn't make sense for the last visible column
             (dx >= 0 && (columnElement.nextElementSibling.offsetWidth + dx) <= this.resizeLimit)) {
             return false;
         }
         return true;
     };
     __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
+        core_1.Input(),
+        __metadata("design:type", Object),
+        __metadata("design:paramtypes", [Array])
     ], DataTable.prototype, "items", null);
     __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Number)
+        core_1.Input(),
+        __metadata("design:type", Number)
     ], DataTable.prototype, "itemCount", void 0);
     __decorate([
-        core_1.ContentChildren(column_component_1.DataTableColumn), 
-        __metadata('design:type', core_1.QueryList)
+        core_1.ContentChildren(column_component_1.DataTableColumn),
+        __metadata("design:type", core_1.QueryList)
     ], DataTable.prototype, "columns", void 0);
     __decorate([
-        core_1.ViewChildren(row_component_1.DataTableRow), 
-        __metadata('design:type', core_1.QueryList)
+        core_1.ViewChildren(row_component_1.DataTableRow),
+        __metadata("design:type", core_1.QueryList)
     ], DataTable.prototype, "rows", void 0);
     __decorate([
-        core_1.ContentChild('dataTableExpand'), 
-        __metadata('design:type', core_1.TemplateRef)
+        core_1.ContentChild('dataTableExpand'),
+        __metadata("design:type", core_1.TemplateRef)
     ], DataTable.prototype, "expandTemplate", void 0);
     __decorate([
-        core_1.Input(), 
-        __metadata('design:type', String)
+        core_1.Input(),
+        __metadata("design:type", String)
     ], DataTable.prototype, "headerTitle", void 0);
     __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
+        core_1.Input(),
+        __metadata("design:type", Object)
     ], DataTable.prototype, "header", void 0);
     __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
+        core_1.Input(),
+        __metadata("design:type", Object)
     ], DataTable.prototype, "pagination", void 0);
     __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
+        core_1.Input(),
+        __metadata("design:type", Object)
     ], DataTable.prototype, "indexColumn", void 0);
     __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
+        core_1.Input(),
+        __metadata("design:type", Object)
     ], DataTable.prototype, "indexColumnHeader", void 0);
     __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Function)
+        core_1.Input(),
+        __metadata("design:type", Function)
     ], DataTable.prototype, "rowColors", void 0);
     __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Function)
+        core_1.Input(),
+        __metadata("design:type", Function)
     ], DataTable.prototype, "rowTooltip", void 0);
     __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
+        core_1.Input(),
+        __metadata("design:type", Object)
     ], DataTable.prototype, "selectColumn", void 0);
     __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
+        core_1.Input(),
+        __metadata("design:type", Object)
     ], DataTable.prototype, "multiSelect", void 0);
     __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
+        core_1.Input(),
+        __metadata("design:type", Object)
     ], DataTable.prototype, "substituteRows", void 0);
     __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
+        core_1.Input(),
+        __metadata("design:type", Object)
     ], DataTable.prototype, "expandableRows", void 0);
     __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
+        core_1.Input(),
+        __metadata("design:type", Object)
     ], DataTable.prototype, "translations", void 0);
     __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
+        core_1.Input(),
+        __metadata("design:type", Object)
     ], DataTable.prototype, "selectOnRowClick", void 0);
     __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
+        core_1.Input(),
+        __metadata("design:type", Object)
     ], DataTable.prototype, "autoReload", void 0);
     __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
+        core_1.Input(),
+        __metadata("design:type", Object)
     ], DataTable.prototype, "showReloading", void 0);
     __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
+        core_1.Input(),
+        __metadata("design:type", Function)
+    ], DataTable.prototype, "rowClickable", void 0);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", Object),
+        __metadata("design:paramtypes", [Object])
     ], DataTable.prototype, "sortBy", null);
     __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
+        core_1.Input(),
+        __metadata("design:type", Object),
+        __metadata("design:paramtypes", [Object])
     ], DataTable.prototype, "sortAsc", null);
     __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
+        core_1.Input(),
+        __metadata("design:type", Object),
+        __metadata("design:paramtypes", [Object])
     ], DataTable.prototype, "offset", null);
     __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
+        core_1.Input(),
+        __metadata("design:type", Object),
+        __metadata("design:paramtypes", [Object])
     ], DataTable.prototype, "limit", null);
     __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
+        core_1.Input(),
+        __metadata("design:type", Object),
+        __metadata("design:paramtypes", [Object])
     ], DataTable.prototype, "page", null);
     __decorate([
-        core_1.Output(), 
-        __metadata('design:type', Object)
+        core_1.Output(),
+        __metadata("design:type", Object)
     ], DataTable.prototype, "reload", void 0);
     __decorate([
-        core_1.Output(), 
-        __metadata('design:type', Object)
+        core_1.Output(),
+        __metadata("design:type", Object)
     ], DataTable.prototype, "rowClick", void 0);
     __decorate([
-        core_1.Output(), 
-        __metadata('design:type', Object)
+        core_1.Output(),
+        __metadata("design:type", Object)
     ], DataTable.prototype, "rowDoubleClick", void 0);
     __decorate([
-        core_1.Output(), 
-        __metadata('design:type', Object)
+        core_1.Output(),
+        __metadata("design:type", Object)
     ], DataTable.prototype, "headerClick", void 0);
     __decorate([
-        core_1.Output(), 
-        __metadata('design:type', Object)
+        core_1.Output(),
+        __metadata("design:type", Object)
     ], DataTable.prototype, "cellClick", void 0);
     DataTable = __decorate([
         core_1.Component({
             selector: 'data-table',
             template: table_template_1.TABLE_TEMPLATE,
             styles: [table_style_1.TABLE_STYLE]
-        }), 
-        __metadata('design:paramtypes', [])
+        })
     ], DataTable);
     return DataTable;
 }());

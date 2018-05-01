@@ -11,11 +11,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
-var core_1 = require('@angular/core');
-var table_component_1 = require('./table.component');
-var pagination_template_1 = require('./pagination.template');
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var table_component_1 = require("./table.component");
+var pagination_template_1 = require("./pagination.template");
 var pagination_style_1 = require("./pagination.style");
-var DataTablePagination = (function () {
+var DataTablePagination = /** @class */ (function () {
     function DataTablePagination(dataTable) {
         this.dataTable = dataTable;
     }
@@ -64,8 +65,8 @@ var DataTablePagination = (function () {
             template: pagination_template_1.PAGINATION_TEMPLATE,
             styles: [pagination_style_1.PAGINATION_STYLE]
         }),
-        __param(0, core_1.Inject(core_1.forwardRef(function () { return table_component_1.DataTable; }))), 
-        __metadata('design:paramtypes', [table_component_1.DataTable])
+        __param(0, core_1.Inject(core_1.forwardRef(function () { return table_component_1.DataTable; }))),
+        __metadata("design:paramtypes", [table_component_1.DataTable])
     ], DataTablePagination);
     return DataTablePagination;
 }());

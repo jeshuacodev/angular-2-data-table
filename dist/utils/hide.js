@@ -8,11 +8,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
 function isBlank(obj) {
     return obj === undefined || obj === null;
 }
-var Hide = (function () {
+var Hide = /** @class */ (function () {
     function Hide(_elementRef, _renderer) {
         this._elementRef = _elementRef;
         this._renderer = _renderer;
@@ -42,8 +43,8 @@ var Hide = (function () {
         }
     };
     Hide = __decorate([
-        core_1.Directive({ selector: '[hide]', inputs: ['hide'] }), 
-        __metadata('design:paramtypes', [core_1.ElementRef, core_1.Renderer])
+        core_1.Directive({ selector: '[hide]', inputs: ['hide'] }),
+        __metadata("design:paramtypes", [core_1.ElementRef, core_1.Renderer])
     ], Hide);
     return Hide;
 }());

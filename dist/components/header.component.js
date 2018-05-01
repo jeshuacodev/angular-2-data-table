@@ -11,11 +11,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
-var core_1 = require('@angular/core');
-var table_component_1 = require('./table.component');
-var header_template_1 = require('./header.template');
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var table_component_1 = require("./table.component");
+var header_template_1 = require("./header.template");
 var header_style_1 = require("./header.style");
-var DataTableHeader = (function () {
+var DataTableHeader = /** @class */ (function () {
     function DataTableHeader(dataTable) {
         this.dataTable = dataTable;
         this.columnSelectorOpen = false;
@@ -32,8 +33,8 @@ var DataTableHeader = (function () {
                 '(document:click)': '_closeSelector()'
             }
         }),
-        __param(0, core_1.Inject(core_1.forwardRef(function () { return table_component_1.DataTable; }))), 
-        __metadata('design:paramtypes', [table_component_1.DataTable])
+        __param(0, core_1.Inject(core_1.forwardRef(function () { return table_component_1.DataTable; }))),
+        __metadata("design:paramtypes", [table_component_1.DataTable])
     ], DataTableHeader);
     return DataTableHeader;
 }());

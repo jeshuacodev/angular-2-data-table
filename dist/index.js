@@ -5,32 +5,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-var core_1 = require('@angular/core');
-var common_1 = require('@angular/common');
-var forms_1 = require('@angular/forms');
-var table_component_1 = require('./components/table.component');
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var common_1 = require("@angular/common");
+var forms_1 = require("@angular/forms");
+var table_component_1 = require("./components/table.component");
 exports.DataTable = table_component_1.DataTable;
-var column_component_1 = require('./components/column.component');
+var column_component_1 = require("./components/column.component");
 exports.DataTableColumn = column_component_1.DataTableColumn;
-var row_component_1 = require('./components/row.component');
+var row_component_1 = require("./components/row.component");
 exports.DataTableRow = row_component_1.DataTableRow;
-var pagination_component_1 = require('./components/pagination.component');
+var pagination_component_1 = require("./components/pagination.component");
 exports.DataTablePagination = pagination_component_1.DataTablePagination;
-var header_component_1 = require('./components/header.component');
+var header_component_1 = require("./components/header.component");
 exports.DataTableHeader = header_component_1.DataTableHeader;
-var px_1 = require('./utils/px');
-var hide_1 = require('./utils/hide');
-var min_1 = require('./utils/min');
-__export(require('./components/types'));
-__export(require('./tools/data-table-resource'));
+var px_1 = require("./utils/px");
+var hide_1 = require("./utils/hide");
+var min_1 = require("./utils/min");
+__export(require("./components/types"));
+__export(require("./tools/data-table-resource"));
 exports.DATA_TABLE_DIRECTIVES = [table_component_1.DataTable, column_component_1.DataTableColumn];
-var DataTableModule = (function () {
+var DataTableModule = /** @class */ (function () {
     function DataTableModule() {
     }
     DataTableModule = __decorate([
@@ -42,8 +40,7 @@ var DataTableModule = (function () {
                 px_1.PixelConverter, hide_1.Hide, min_1.MinPipe
             ],
             exports: [table_component_1.DataTable, column_component_1.DataTableColumn]
-        }), 
-        __metadata('design:paramtypes', [])
+        })
     ], DataTableModule);
     return DataTableModule;
 }());
