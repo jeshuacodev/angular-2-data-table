@@ -1,6 +1,6 @@
 #Truenorth Setup
 
-- pull the latest code.
+- pull the latest TrueNorth App [source code](https://emmersionlearning.visualstudio.com/EmmersionLearning/_git/TrueNorth).
 
 ---
 
@@ -13,9 +13,10 @@
 
 - execute a 'npm install angular-tn-data-table' command
 
-(To make sure everything is working fine)
--execute a 'node node_modules/webpack/bin/webpack.js' command, this will ensure that you got the right library and
-is built and packaged well by webpack.
+##To make sure everything is working fine
+
+- execute a 'node node_modules/webpack/bin/webpack.js' command, this will ensure that you got the right library and
+  is built and packaged well by webpack.
 
 ##Pro Tip
 
