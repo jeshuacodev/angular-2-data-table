@@ -1,20 +1,24 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+## Angular 2 Data Table
+### ** Updated for Angular 5 [here](https://github.com/ggmod/angular-5-data-table). This repo will not be updated **
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+A simple Angular 2 data table, with built-in solutions for features including:
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+* pagination
+* sorting
+* row selection (single/multi)
+* expandable rows
+* column resizing
+* selecting visible columns
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+The component can be used not just with local data, but remote resources too: for example if the sorting and paging happen in the database.
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://www.visualstudio.com/en-us/docs/git/create-a-readme). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+The templates use bootstrap CSS class names, so the component requires a bootstrap .css file to be present in the application using it.
+
+Check out the [demo](https://ggmod.github.io/angular-2-data-table-demo) and its [code](https://github.com/ggmod/angular-2-data-table-demo) for examples of how to use it. 
+
+## Installing:
+`npm install angular-2-data-table --save`
+
+
+#### Licensing
+MIT License
