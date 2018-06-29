@@ -16,15 +16,17 @@
 4. Configure your local to have vsts authentication:
    - `vsts-npm-auth -config .npmrc`
    (at this point, Microsoft Authentication will ask for your credentials.)
-4. Once you authentication is successful, Execute npm install command:
-   - `npm install angular-tn-data-table` 
+4. Once your authentication is successful, Execute npm install command:
+   - `npm install` 
 
-##To make sure everything is working fine
+For references check this [docs](https://docs.microsoft.com/en-us/vsts/package/npm/npmrc?view=vsts)
+
+###To make sure everything is working fine
 
 Execute this command (this will ensure that you got the right library and is built and packaged well by webpack.) :
  - `node node_modules/webpack/bin/webpack.js` 
 
-##Pro Tip
+###Pro Tip
 
 - if you encountered weird issues, such as still referencing angular-2-data-table during the execution of 'node node_modules/webpack/bin/webpack.js' command,
   kindly check the node_modules folder in "C:/<username>/", and make sure angular-2-data-table is removed.
