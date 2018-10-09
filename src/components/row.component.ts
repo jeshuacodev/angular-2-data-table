@@ -7,7 +7,7 @@ import { ROW_STYLE } from "./row.style";
 
 
 @Component({
-    selector: '[dataTableRow]',
+    selector: 'data-row',
     template: ROW_TEMPLATE,
     styles: [ROW_STYLE]
 })
