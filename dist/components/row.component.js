@@ -69,7 +69,7 @@ var DataTableRow = /** @class */ (function () {
     ], DataTableRow.prototype, "selectedChange", void 0);
     DataTableRow = __decorate([
         core_1.Component({
-            selector: '[dataTableRow]',
+            selector: 'data-row',
             template: row_template_1.ROW_TEMPLATE,
             styles: [row_style_1.ROW_STYLE]
         }),
