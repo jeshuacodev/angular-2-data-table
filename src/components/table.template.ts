@@ -29,9 +29,9 @@ export const TABLE_TEMPLATE = `
                     </th>
                 </tr>
             </thead>
-            <ng-container *ngFor="let item of items; let index=index" class="data-table-row-wrapper"
+            <tbody *ngFor="let item of items; let index=index" class="data-table-row-wrapper"
                    dataTableRow #row [item]="item" [index]="index" (selectedChange)="onRowSelectChanged(row)">
-            </ng-container>
+            </tbody>
             <tbody class="substitute-rows" *ngIf="pagination && substituteRows">
                 <tr *ngFor="let item of substituteItems, let index = index"
                     [class.row-odd]="(index + items.length) % 2 === 0"
