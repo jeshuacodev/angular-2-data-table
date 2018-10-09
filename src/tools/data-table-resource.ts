@@ -17,7 +17,7 @@ export class DataTableResource<T> {
         if (params.sortBy) {
             result.sort((a, b) => {
                 if (typeof a[params.sortBy] === 'string') {
-                    return a[params.sortBy].localeCompare(b[params.sortBy], undefined, {numeric: true});
+                    return a[params.sortBy].localeCompare(b[params.sortBy]);
                 } else {
                     return a[params.sortBy] - b[params.sortBy];
                 }
